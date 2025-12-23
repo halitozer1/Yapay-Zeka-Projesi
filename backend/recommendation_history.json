@@ -1,0 +1,24 @@
+{
+  "system": [
+    "tip:yüksek sıcaklık programlarını sadece gerektiğinde kullanın; çoğu gün orta program yeterlidir.",
+    "tip:bulaşıkları akan su altında ön durulamak yerine sıyırıp makineye yerleştirmek her yıkamada ciddi tasarruf sağlar.",
+    "tip:makinede kısa program her zaman az su demek değildir; eko programı uzun sürse de daha verimlidir.",
+    "tip:filtre temizliği, makinenin verimli çalışmasını sağlar; gereksiz tekrar yıkamayı önler."
+  ],
+  "manual": [
+    "tip:sabunlanırken suyu kapatmak her duşta onlarca litreyi kurtarır.",
+    "tip:çamaşır makinesini sadece tam dolu olduğunda çalıştırarak su ve enerji tasarrufunu maksimize edin.",
+    "tip:sıcak suyu gereksiz yükseltmek hem su hem enerji maliyetini artırır.",
+    "tip:atık su bedeli kullanım ile orantılıdır; az kullanım çift taraflı tasarruftur.",
+    "tip:kısa program suyu azaltmıyor olabilir; eko programı deneyin.",
+    "tip:aynı sıcaklıkta yıkanabilecek çamaşırları birleştirmek yıkama sayısını azaltır.",
+    "tip:makinede kısa program her zaman az su demek değildir; eko programı uzun sürse de daha verimlidir.",
+    "tip:diş fırçalarken musluğu kapatmak küçük ama sürekli tasarruf sağlar.",
+    "tip:sebze-meyveyi akan su altında değil bir kapta yıkamak su israfını azaltır.",
+    "tip:yüksek sıcaklık programlarını sadece gerektiğinde kullanın; çoğu gün orta program yeterlidir.",
+    "tip:bulaşık makinesini 'eko' modunda çalıştırmak su tüketimini ve faturayı belirgin düşürür.",
+    "tip:musluk ve rezervuar sızıntılarını kontrol edin; küçük damlama bile haftada ciddi litreye çıkar.",
+    "tip:ön yıkamayı sadece gerçekten kirli çamaşırlarda açın; çoğu zaman gereksiz su tüketir.",
+    "tip:elde bulaşık yıkıyorsanız leğen kullanmak sürekli akan suya göre çok daha verimlidir."
+  ]
+}

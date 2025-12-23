@@ -1,0 +1,70 @@
+# SU OPTİMİZASYON ASİSTANI - HESAPLAMA METOTLARI VE MATEMATİKSEL FONKSİYONLAR
+
+Bu dosya, sistemde kullanılan tüm maliyet, tasarruf ve sürdürülebilirlik hesaplamalarının detaylarını içermektedir.
+
+---
+
+### 1. MALİYET HESAPLAMA (TARİFE MANTIĞI)
+
+Sistem, suyu harcandığı saate göre farklı tarifelerle fiyatlandırır.
+
+*   **Sabitler:**
+    - Gündüz Birim Fiyat (UNIT_PRICE_DAY): 0.089705 TL / Litre
+    - Gece Birim Fiyat (UNIT_PRICE_NIGHT): 0.17941 TL / Litre (2x zamlı tarife)
+    - Gece Saatleri: 22:00 ile 04:00 arası
+    - **NOT:** Gece tarifesi DAHA PAHALI olduğundan, kullanımı gündüz saatlerine kaydırmak tasarruf sağlar.
+
+*   **Fonksiyon:**
+    Maliyet = Kullanım (Litre) * Birim Fiyat (Saate Bağlı)
+
+---
+
+### 2. SÜRDÜRÜLEBİLİRLİK VE TASARRUF HESABI
+
+Kullanıcının doğaya katkısı, aylık kotasından (30,000 L) ne kadar az tükettiğine göre hesaplanır.
+
+*   **Kurtarılan Su:**
+    Kurtarılan Su = Maksimum(0, 30.000 - Toplam Kullanım)
+
+*   **CO2 Tasarrufu:**
+    Her 1,000 Litre (1 m3) suyun arıtılması ve dağıtımı için yaklaşık 0.3 kg CO2 harcandığı varsayılır.
+    CO2 Tasarrufu (kg) = (Kurtarılan Su / 1000) * 0.3
+
+*   **Ağaç Kurtarma Sayısı:**
+    Yetişkin bir ağacın ayda ortalama 1.6 kg CO2 emdiği varsayılır.
+    Kurtarılan Ağaç Sayısı = CO2 Tasarrufu (kg) / 1.6
+
+---
+
+### 3. TAHMİN VE PROJEKSİYON (PROJECTION)
+
+Mevcut kullanım trendine göre ay sonu faturasının ne olacağını öngörür.
+
+*   **Aylık Tahmin (₺):**
+    Aylık Tahmin = (Mevcut Toplam Maliyet / Ölçülen Gün Sayısı) * 30
+
+*   **Haftalık Kâr/Zarar (Delta):**
+    Referans Limit Maliyeti = (Günlük Referans * Ölçülen Gün Sayısı) * Gündüz Birim Fiyatı
+    Kâr/Zarar = Referans Limit Maliyeti - Mevcut Toplam Maliyet
+
+---
+
+### 4. REFERANS DEĞERLER (BASELINE)
+
+Sistemin "normal" kabul ettiği kullanım sınırlarıdır.
+
+*   **Aylık Referans:** 30 m3 (30,000 Litre)
+*   **Günlük Referans:** 1,000 Litre
+*   **Saatlik Referans (Grafiklerdeki limit):** 41.67 Litre/Saat
+    (30.000 L / 30 Gün / 24 Saat)
+
+---
+
+### 5. SİMÜLASYON HIZI (ZAMAN KONTROLÜ)
+
+*   **Tick Oranı:** 1.5 saniye = 1 saatlik gerçek veri girişi.
+    Bu, sistemin gerçek zamanlı (Real-Time) akışını hızlandırarak 1 aylık veriyi daha hızlı analiz etmenizi sağlar.
+
+---
+Dosya Oluşturulma Tarihi: 2025-12-21
+Uygulama: Water AI Optimization Backend
